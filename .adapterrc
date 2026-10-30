@@ -1,0 +1,19 @@
+{
+  "buildPlatform": "web-mobile",
+  "orientation": "auto",
+  "exportChannels": [
+    "Google",
+    "Unity",
+    "AppLovin"
+  ],
+  "injectOptions": {
+    "Google": {
+      "head": "<meta name='ad.size' content='width=320,height=480'><script>var clickTag = 'https://play.google.com/store/apps/details?id=your.game.package';</script>",
+      "body": "<a onclick='ExitApi.exit()' style='display: none;'></a>"
+    },
+    "Unity": {
+      "body": "<script>if(mraid.getState()==='loading'){mraid.addEventListener('ready',onSdkReady)}else{onSdkReady()}function viewableChangeHandler(viewable){}function onSdkReady(){mraid.addEventListener('viewableChange',viewableChangeHandler);if(mraid.isViewable()){showMyAd()}}var url='https://play.google.com/store/apps/details?id=your.game.package';var android='https://play.google.com/store/apps/details?id=your.game.package';if(/android/i.test(userAgent)){url=android}function showMyAd(){mraid.open(url)}</script>",
+      "sdkScript": "<script src='./mraid.js'></script>"
+    }
+  }
+}
