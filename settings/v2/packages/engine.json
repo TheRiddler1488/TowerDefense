@@ -104,7 +104,7 @@
             "_value": false
           },
           "profiler": {
-            "_value": true
+            "_value": false
           },
           "occlusion-query": {
             "_value": false
@@ -201,7 +201,6 @@
           "gfx-webgl2",
           "graphics",
           "intersection-2d",
-          "profiler",
           "tween",
           "ui",
           "webview"
